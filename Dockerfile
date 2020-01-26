@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
-RUN apt-get update -y
-RUN apt-get install -y software-properties-common
+RUN apt-get update -y && apt-get install -y software-properties-common
 
 RUN apt-get install -y wget
 RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key 2>/dev/null | apt-key add -
