@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 
 RUN apt-get update -y && apt-get install -y software-properties-common
 
@@ -14,5 +14,5 @@ RUN echo "deb http://apt.llvm.org/eoan/ llvm-toolchain-eoan-9 main" >> /etc/apt/
 RUN echo "deb http://apt.llvm.org/eoan/ llvm-toolchain-eoan-10 main" >> /etc/apt/sources.list.d/llvm.list
 
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install -y cmake ninja-build valgrind git pkg-config doxygen qemu-user curl unzip gcc-9 g++-9 clang-10 clang-tidy-10 clang-tools-10 gcc-powerpc-linux-gnu gcc-powerpc64-linux-gnu gcc-arm-linux-gnueabihf gcc-9-aarch64-linux-gnu
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y cmake ninja-build valgrind git pkg-config doxygen qemu-user curl unzip gcc-9 g++-9 clang-10 clang-tidy-10 clang-tools-10 gcc-powerpc-linux-gnu gcc-powerpc64-linux-gnu gcc-arm-linux-gnueabihf gcc-9-aarch64-linux-gnu gcc-9-riscv64-linux-gnu
 
